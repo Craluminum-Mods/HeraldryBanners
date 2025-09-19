@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "heraldrybanners",
+    "name": "Heraldry : Banners",
+    "authors": ["Craluminum2413 (Dana)", "SaltyWater"],
+    "description": "Customizable banners with heraldic symbols!",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.21.0",
+        "attributerenderinglibrary": "2.3.0",
+        "heraldry": "1.0.0"
+    }
+}
