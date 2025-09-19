@@ -3,6 +3,7 @@
     "modid": "heraldrybanners",
     "name": "Heraldry : Banners",
     "authors": ["Craluminum2413 (Dana)", "SaltyWater"],
+    "contributors": ["Moby_"],
     "description": "Customizable banners with heraldic symbols!",
     "version": "1.0.0",
     "dependencies": {
