@@ -8,5 +8,6 @@ public class Core : ModSystem
     {
         api.RegisterBlockClass("HeraldryBanners.BlockPole", typeof(BlockPole));
         api.RegisterBlockEntityClass("HeraldryBanners.BEPole", typeof(BlockEntityPole));
+        Mod.Logger.Event("started '{0}' mod", Mod.Info.Name);
     }
 }
