@@ -1,0 +1,111 @@
+{
+    "code": "pole",
+    "class": "HeraldryBanners.BlockPole",
+    "entityClass": "HeraldryBanners.BEPole",
+    "attributes": {
+        "reinforcable": true,
+        "attributeTransformCodeByType": {
+            "*-wall-*": "onHeraldryPoleWallTransform",
+            "*-wall2-*": "onHeraldryPoleWall2Transform"
+        }
+    },
+    "behaviors": [
+        // to handle drops properly, call HorizontalAttachable before BlockShapeTexturesFromAttributes
+        { "name": "AttributeRenderingLibrary.HorizontalAttachable", "properties": { "dropBlockFace": "east" } },
+        {
+            "name": "AttributeRenderingLibrary.BlockShapeTexturesFromAttributes",
+            "properties": {
+                "name": {
+                    "*": ["heraldrybanners:block-pole-{type}-{placement}-{side}", " (", "material-{wood}", ")"]
+                },
+                "textures": {
+                    "wood-*": {
+                        "white": { "base": "game:block/wood/debarked/{wood}" },
+                        "aged": { "base": "game:block/wood/bark/{wood}" },
+                        "oak2": { "base": "game:block/wood/debarked/{wood}" }
+                    },
+                    "*": {
+                        "white": { "base": "game:block/wood/debarked/oak" },
+                        "aged": { "base": "game:block/wood/bark/oak" },
+                        "oak2": { "base": "game:block/wood/debarked/oak" }
+                    }
+                }
+            }
+        },
+        { "name": "Lockable" }
+    ],
+    "entityBehaviors": [{ "name": "AttributeRenderingLibrary.ShapeTexturesFromAttributes" }],
+    "variantgroups": [
+        { "code": "type", "states": ["banner"] },
+        { "code": "placement", "states": ["wall", "wall2"] },
+        { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "creativeInventoryStacksByType": {
+        "*-east": [
+            {
+                "tabs": ["general", "decorative", "heraldry"],
+                "stacks": [
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "birch" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "oak" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "maple" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "pine" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "acacia" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "kapok" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "baldcypress" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "larch" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "redwood" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "ebony" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "walnut" } } },
+                    { "type": "block", "code": "pole-{type}-{placement}-east", "attributes": { "types": { "wood": "purpleheart" } } }
+                ]
+            }
+        ]
+    },
+    "shapeByType": {
+        "*-north": { "base": "heraldrybanners:block/pole/{type}-{placement}", "rotateY": 0 },
+        "*-east": { "base": "heraldrybanners:block/pole/{type}-{placement}", "rotateY": 270 },
+        "*-west": { "base": "heraldrybanners:block/pole/{type}-{placement}", "rotateY": 90 },
+        "*-south": { "base": "heraldrybanners:block/pole/{type}-{placement}", "rotateY": 180 }
+    },
+    "textures": {
+        "white": { "base": "game:block/cloth/banner/magnolia" },
+        "lead": { "base": "game:block/metal/plate/lead" }
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "resistance": 3,
+    "lightAbsorption": 0,
+    "sideAo": { "all": false },
+    "sidesolid": { "all": false },
+    "sideopaque": { "all": false },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 35
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "walk": "game:walk/wood"
+    },
+    "guiTransformByType": {
+        "*-wall-*": {
+            "rotation": { "x": -22.6, "y": -30, "z": 0 },
+            "origin": { "x": 0.5, "y": 1.2, "z": 0.1 },
+            "scaleXyz": { "x": -1.45, "y": 1.45, "z": 1.45 }
+        },
+        "*-wall2-*": {
+            "rotation": { "x": -22.6, "y": -50, "z": 0 },
+            "origin": { "x": 0.1, "y": 0.9, "z": 0.5 },
+            "scaleXyz": { "x": -1.1, "y": 1.1, "z": 1.1 }
+        }
+    },
+    "selectionBoxesByType": {
+        "*-wall-*": [{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 0.125, "rotateYByType": { "*-north": 0, "*-east": 270, "*-south": 180, "*-west": 90 } }],
+        "*-wall2-*": [{ "x1": 0.375, "y1": 0, "z1": 0, "x2": 0.625, "y2": 1, "z2": 1, "rotateYByType": { "*-north": 0, "*-east": 270, "*-south": 180, "*-west": 90 } }]
+    },
+    "collisionBoxesByType": {
+        "*-wall-*": [{ "x1": 0, "y1": 0.875, "z1": 0, "x2": 1, "y2": 1, "z2": 0.125, "rotateYByType": { "*-north": 0, "*-east": 270, "*-south": 180, "*-west": 90 } }],
+        "*-wall2-*": [{ "x1": 0.375, "y1": 0, "z1": 0, "x2": 0.625, "y2": 1, "z2": 1, "rotateYByType": { "*-north": 0, "*-east": 270, "*-south": 180, "*-west": 90 } }]
+    }
+}

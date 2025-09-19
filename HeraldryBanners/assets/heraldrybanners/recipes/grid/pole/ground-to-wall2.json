@@ -1,0 +1,38 @@
+[
+    {
+        "ingredientPattern": "A",
+        "ingredients": {
+            "A": { "type": "block", "code": "heraldrybanners:pole-banner-wall2-east" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "copyAttributesFrom": "A",
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-ground1x3-east" }
+    },
+    {
+        "ingredientPattern": "A",
+        "ingredients": {
+            "A": { "type": "block", "code": "heraldrybanners:pole-banner-ground1x3-east" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "copyAttributesFrom": "A",
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "heraldrybanners:pole-flag-ground1x4-east" }
+    },
+    {
+        "ingredientPattern": "A",
+        "ingredients": {
+            "A": { "type": "block", "code": "heraldrybanners:pole-flag-ground1x4-east" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "copyAttributesFrom": "A",
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-wall2-east" }
+    }
+]

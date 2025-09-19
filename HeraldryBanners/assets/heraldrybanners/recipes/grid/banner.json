@@ -1,0 +1,12 @@
+[
+    {
+        "ingredientPattern": "__P,_C_,C__",
+        "ingredients": {
+            "P": { "type": "item", "code": "game:plank-*" },
+            "C": { "type": "item", "code": "game:cloth-plain" }
+        },
+        "width": 3,
+        "height": 3,
+        "output": { "type": "item", "code": "heraldrybanners:banner", "attributes": { "types": { "layer1": "color_plain" } } }
+    }
+]

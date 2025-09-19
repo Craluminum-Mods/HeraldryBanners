@@ -1,0 +1,635 @@
+{
+    "code": "banner",
+    "class": "Heraldry.CopyPatterns", // handles copying patterns from one item to another
+    "attributes": {
+        "antlermountable": true,
+        "onAntlerMountTransform": { "translation": { "x": -0.3, "y": -0.3, "z": -0 }, "rotation": { "x": 0, "y": -90, "z": 0 } },
+
+        "heraldryPoleStorable": true,
+        "onHeraldryPoleGroundTransform": { "translation": { "x": 0.28, "y": 0.89, "z": -0.5 }, "rotation": { "x": 0, "y": -180, "z": 0 } },
+        "onHeraldryPoleWallTransform": { "translation": { "x": -0.5, "y": -0.63, "z": -0.91 }, "scaleXyz": { "x": -1, "y": 1, "z": 1 } },
+        "onHeraldryPoleCeilingTransform": { "translation": { "x": -0.5, "y": -0.63, "z": -0.5 }, "scaleXyz": { "x": -1, "y": 1, "z": 1 } },
+        "onHeraldryPoleWall2Transform": { "translation": { "x": -0.5, "y": -1.28, "z": -0.06 }, "rotation": { "x": 0, "y": -90, "z": 0 }, "scaleXyz": { "x": -1, "y": 1, "z": 1 } },
+        "onHeraldryFlagpoleTransform": { "translation": { "x": 0.094, "y": 2.5, "z": -0.5 }, "rotation": { "x": 0, "y": 180, "z": -90 } },
+
+        "ignoreKeysWhenCopyingPatterns": ["shape"],
+
+        "HeraldryProperties": {
+            "ConsumeLitres": 0.01,
+            "AvailableShapes": ["pennant", "swallowtail_pennant", "tapering_pennant", "swallowtail", "double_swallowtail", "gonfalon", "double_notched", "quadruple_notched", "roundcorners", "rounded_notch", "aged1", "aged2", "aged3", "aged4", "aged5"],
+            "AvailableColors": ["black", "blue", "brown", "gray", "green", "orange", "pink", "purple", "red", "white", "yellow"],
+            "AvailablePatterns": [
+                "border",
+                "curly_border",
+                "circle",
+                "circle_large",
+                "cross",
+                "diagonal_left",
+                "diagonal_right",
+                "diagonal_up_left",
+                "diagonal_up_right",
+                "gradient_up",
+                "gradient",
+                "half_horizontal",
+                "half_horizontal_bottom",
+                "half_vertical",
+                "half_vertical_right",
+                "rhombus",
+                "club",
+                "heart",
+                "spade",
+                "small_stripes",
+                "small_stripes_hor",
+
+                "square_bottom_left",
+                "square_bottom_right",
+                "square_top_left",
+                "square_top_right",
+
+                "square_half_bottom_left",
+                "square_half_bottom_right",
+                "square_half_top_left",
+                "square_half_top_right",
+
+                "straight_cross",
+                "stripe_bottom",
+                "stripe_center",
+                "stripe_downleft",
+                "stripe_downright",
+                "stripe_left",
+                "stripe_middle",
+                "stripe_right",
+                "stripe_top",
+                "triangle_bottom",
+                "triangle_top",
+                "triangles_bottom",
+                "triangles_top",
+                "bricks",
+                "checker2_inverted",
+                "checker2",
+                "checker4_inverted",
+                "checker4",
+
+                "crescent_left",
+                "crescent_right",
+                "crescent_down",
+                "crescent_up",
+
+                "yang",
+                "yin",
+                "flower",
+                "globe",
+                "skull",
+                "fleurdelis",
+                "lion_left",
+                "lion_right",
+                "catfish",
+                "mobydick",
+                "cookie",
+                "drifter",
+                "eidolon",
+                "elk",
+                "falx_left",
+                "falx_right",
+                "hansafish",
+                "hansakeys",
+                "hansalargefish",
+                "hansaship",
+                "hansatown",
+                "vs"
+            ]
+        }
+    },
+    "behaviors": [
+        {
+            "name": "AttributeRenderingLibrary.ShapeTexturesFromAttributes",
+            "properties": {
+                "name": {
+                    "layer1-*": ["heraldrybanners:item-banner-{layer1}"]
+                },
+                "description": {
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*::layer8-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}",
+                        "\n",
+                        "heraldry:layer7",
+                        "heraldry:pattern-{layer7}",
+                        "\n",
+                        "heraldry:layer8",
+                        "heraldry:pattern-{layer8}"
+                    ],
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}",
+                        "\n",
+                        "heraldry:layer7",
+                        "heraldry:pattern-{layer7}"
+                    ],
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}"
+                    ],
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}"
+                    ],
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}"
+                    ],
+                    "shape-*::layer1-*::layer2-*::layer3-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}"
+                    ],
+                    "shape-*::layer1-*::layer2-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}"
+                    ],
+                    "shape-*::layer1-*": [
+                        //
+                        "heraldry:shapepattern",
+                        "heraldry:shapepattern-{shape}",
+                        "\n",
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n"
+                    ],
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*::layer8-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}",
+                        "\n",
+                        "heraldry:layer7",
+                        "heraldry:pattern-{layer7}",
+                        "\n",
+                        "heraldry:layer8",
+                        "heraldry:pattern-{layer8}"
+                    ],
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}",
+                        "\n",
+                        "heraldry:layer7",
+                        "heraldry:pattern-{layer7}"
+                    ],
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}",
+                        "\n",
+                        "heraldry:layer6",
+                        "heraldry:pattern-{layer6}"
+                    ],
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}",
+                        "\n",
+                        "heraldry:layer5",
+                        "heraldry:pattern-{layer5}"
+                    ],
+                    "layer1-*::layer2-*::layer3-*::layer4-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}",
+                        "\n",
+                        "heraldry:layer4",
+                        "heraldry:pattern-{layer4}"
+                    ],
+                    "layer1-*::layer2-*::layer3-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}",
+                        "\n",
+                        "heraldry:layer3",
+                        "heraldry:pattern-{layer3}"
+                    ],
+                    "layer1-*::layer2-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n",
+                        "heraldry:layer2",
+                        "heraldry:pattern-{layer2}"
+                    ],
+                    "layer1-*": [
+                        //
+                        "heraldry:layer1",
+                        "heraldry:pattern-{layer1}",
+                        "\n"
+                    ]
+                },
+                "textures": {
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*::layer8-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer7}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer8}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer7}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*::layer5-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*::layer3-*::layer4-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*::layer3-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*::layer2-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "shape-*::layer1-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/shapepattern/{shape}", "blendMode": "OverlayCutout" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*::layer8-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer7}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer8}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*::layer7-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer7}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*::layer6-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer6}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*::layer4-*::layer5-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer5}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*::layer4-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer4}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*::layer3-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" },
+                                { "base": "heraldrybanners:item/banner/pattern/{layer3}" }
+                            ]
+                        }
+                    },
+                    "layer1-*::layer2-*": {
+                        "pattern": {
+                            "base": "heraldrybanners:item/banner/pattern/{layer1}",
+                            "blendedOverlays": [
+                                //
+                                { "base": "heraldrybanners:item/banner/pattern/{layer2}" }
+                            ]
+                        }
+                    },
+                    "layer1-*": {
+                        "pattern": { "base": "heraldrybanners:item/banner/pattern/{layer1}" }
+                    }
+                }
+            }
+        }
+    ],
+    "shape": { "base": "heraldrybanners:item/banner-normal" },
+    "textures": {
+        "seraph": { "base": "game:block/transparent" },
+        "neck": { "base": "game:block/cloth/linen/gray" },
+        "brooch": { "base": "game:block/metal/plate/steel" }
+    },
+    "creativeInventoryStacks": [
+        {
+            "tabs": ["general", "items", "clothing", "heraldry"],
+            "stacks": [
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_black" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_blue" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_brown" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_gray" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_green" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_orange" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_pink" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_purple" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_red" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_white" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "layer1": "color_yellow" } } },
+
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "pennant", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "swallowtail_pennant", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "tapering_pennant", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "swallowtail", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "double_swallowtail", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "gonfalon", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "double_notched", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "quadruple_notched", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "roundcorners", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "rounded_notch", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "aged1", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "aged2", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "aged3", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "aged4", "layer1": "color_plain" } } },
+                { "type": "item", "code": "banner", "attributes": { "types": { "shape": "aged5", "layer1": "color_plain" } } }
+            ]
+        }
+    ],
+    "maxStackSize": 1,
+    "guiTransform": {
+        "rotation": { "x": 0, "y": -1, "z": 180 },
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 0.8
+    },
+    "tpHandTransform": {
+        "translation": { "x": -1.8, "y": -1, "z": -1.8 },
+        "rotation": { "x": 0, "y": 0, "z": 60 }
+    },
+    "groundTransform": {
+        "translation": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 90, "y": 0, "z": 90 },
+        "origin": { "x": 0.3, "y": 0.5, "z": 0.5299 },
+        "scale": 6
+    }
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "ingredientPattern": "A",
+        "ingredients": {
+            "A": { "type": "block", "code": "heraldrybanners:pole-banner-ceiling-east" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "copyAttributesFrom": "A",
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-wall-east" }
+    },
+    {
+        "ingredientPattern": "A",
+        "ingredients": {
+            "A": { "type": "block", "code": "heraldrybanners:pole-banner-wall-east" }
+        },
+        "shapeless": true,
+        "width": 1,
+        "height": 1,
+        "copyAttributesFrom": "A",
+        "recipeGroup": 1,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-ceiling-east" }
+    }
+]

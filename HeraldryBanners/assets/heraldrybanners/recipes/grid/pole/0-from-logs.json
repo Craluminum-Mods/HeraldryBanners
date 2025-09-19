@@ -1,0 +1,53 @@
+[
+    {
+        "ingredientPattern": "___,KWM,___",
+        "ingredients": {
+            "W": {
+                "type": "block",
+                "code": "game:log-placed-*-ud",
+                "name": "wood",
+                "allowedVariants": ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"]
+            },
+            "M": { "type": "item", "code": "game:metalnailsandstrips-*" },
+            "K": { "type": "item", "code": "game:knife-*", "isTool": true }
+        },
+        "shapeless": true,
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-wall2-east", "attributes": { "types": { "wood": "{wood}" } } }
+    },
+    {
+        "ingredientPattern": "_W_,K_M,___",
+        "ingredients": {
+            "W": {
+                "type": "block",
+                "code": "game:log-placed-*-ud",
+                "name": "wood",
+                "allowedVariants": ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"]
+            },
+            "M": { "type": "item", "code": "game:metalnailsandstrips-*" },
+            "K": { "type": "item", "code": "game:knife-*", "isTool": true }
+        },
+        "shapeless": true,
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "heraldrybanners:pole-banner-ground1x3-east", "attributes": { "types": { "wood": "{wood}" } } }
+    },
+    {
+        "ingredientPattern": "___,K_M,_W_",
+        "ingredients": {
+            "W": {
+                "type": "block",
+                "code": "game:log-placed-*-ud",
+                "name": "wood",
+                "allowedVariants": ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"]
+            },
+            "M": { "type": "item", "code": "game:metalnailsandstrips-*" },
+            "K": { "type": "item", "code": "game:knife-*", "isTool": true }
+        },
+        "shapeless": true,
+        "width": 3,
+        "height": 3,
+        "output": { "type": "block", "code": "heraldrybanners:pole-flag-ground1x4-east", "attributes": { "types": { "wood": "{wood}" } } }
+    }
+]
