@@ -15,7 +15,7 @@
         },
         "handbook": {
             "groupBy": ["pole-flag-*"]
-        },
+        }
     },
     "behaviors": [
         // to handle drops properly, call HorizontalOrientable before BlockShapeTexturesFromAttributes
