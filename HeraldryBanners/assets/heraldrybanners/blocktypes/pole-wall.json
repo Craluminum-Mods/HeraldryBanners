@@ -9,7 +9,10 @@
             "*-wall2-*": "onHeraldryPoleWall2Transform"
         },
         "handbook": {
-            "groupBy": ["pole-banner-wall*-*"]
+            "groupBy": [
+                "pole-banner-wall-*",
+                "pole-banner-wall2-*",
+            ]
         }
     },
     "behaviors": [
