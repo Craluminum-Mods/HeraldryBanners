@@ -12,7 +12,10 @@
                     { "x1": 1, "y1": 0, "z1": 0.5625, "x2": 0.625, "y2": 1, "z2": 0.4375, "rotateYByType": { "*-north": 0, "*-east": 270, "*-south": 180, "*-west": 90 } }
                 ]
             }
-        }
+        },
+        "handbook": {
+            "groupBy": ["pole-flag-*"]
+        },
     },
     "behaviors": [
         // to handle drops properly, call HorizontalOrientable before BlockShapeTexturesFromAttributes
