@@ -4,7 +4,10 @@
     "entityClass": "HeraldryBanners.BEPole",
     "attributes": {
         "reinforcable": true,
-        "attributeTransformCode": "onHeraldryPoleCeilingTransform"
+        "attributeTransformCode": "onHeraldryPoleCeilingTransform",
+        "handbook": {
+            "groupBy": ["pole-banner-ceiling-*"]
+        }
     },
     "behaviors": [
         // to handle drops properly, call HorizontalOrientable before BlockShapeTexturesFromAttributes
