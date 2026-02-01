@@ -5,7 +5,7 @@
     "authors": ["Craluminum2413 (Dana)", "SaltyWater"],
     "contributors": ["Moby_"],
     "description": "Customizable banners with heraldic symbols!",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "game": "1.21.0",
         "attributerenderinglibrary": "2.3.0",
